@@ -1,0 +1,1 @@
+<?php $this->widget('frontend.components.widgets.MenuWidget', array()); ?>

@@ -1,0 +1,33 @@
+<?php $this->beginContent('//layouts/main'); ?>
+<!-- #page -->
+<div id="page"> 
+  <!-- #header -->
+  <?php $this->beginContent('//layouts/_partials/header'); ?><?php $this->endContent(); ?>
+  <!--End #header -->
+  
+  <div class="clearb"></div>
+  <!-- #bgmenu -->
+  <?php $this->beginContent('//layouts/_partials/menu'); ?>
+  <?php $this->endContent(); ?>
+  <!-- End #bgmenu -->
+  <div class="clearb"></div>
+  
+  <!-- #contenu -->
+  <div id="contenu"> 
+    <!-- #center -->
+    <div id="center"> 
+      <?php echo $content;?>
+    </div>
+    <!-- End #center -->
+    
+    <div class="clearb"></div>
+    
+    <!-- #footer -->
+    <?php $this->beginContent('//layouts/_partials/footer'); ?><?php $this->endContent(); ?>
+    <!-- End #footer --> 
+    
+  </div>
+  <!-- End #contenu --> 
+</div>
+<!-- End #page -->
+<?php $this->endContent(); ?>
