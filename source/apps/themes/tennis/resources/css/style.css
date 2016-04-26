@@ -121,7 +121,7 @@ body{
 }
 .col_1_of_4:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 .span_1_of_4 {
-	width:23.8%;
+	width:22.8%;
 }
 /***** Media Quries *****/
 @media only screen and (max-width: 1024px) {
@@ -215,6 +215,13 @@ p.desc{
 	width: 100%;
 	background: #F6F6F6;
 	padding:3% 0;
+	overflow: hidden;
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 3px;
+}
+.content-full {
+	width: 100%;
+	padding:0;
 	overflow: hidden;
 	border-bottom: 1px solid #F0F0F0;
 	margin-bottom: 3px;

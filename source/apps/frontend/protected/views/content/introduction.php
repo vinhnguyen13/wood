@@ -1,16 +1,18 @@
 <?php
 /* @var $this SiteController */
 ?>
-<div class="block-content-small">
-<div class="title">Giới thiệu</div>
-<div class="content-detail">
+<div class="content-top">
+    <div class="wrap">
+        <div class="content-full">
+            <h2>Giới thiệu</h2>
+            <?php
+            if(!empty($content)){
+                echo $content->fulltext;
+            }
+            ?>
+        </div>
 
-<?php
-if(!empty($content)){
-    echo $content->fulltext;
-}
-?>
+        <div class="clear"></div>
+    </div>
 </div>
-<div class="content-footer"></div>
-</div>
-
+<?php $this->beginContent('//layouts/_partials/ContentMiddle'); ?><?php $this->endContent(); ?>

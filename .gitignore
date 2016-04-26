@@ -1,0 +1,6 @@
+/admin/assets
+/source/apps/frontend/protected/assets
+/source/apps/frontend/protected/runtime
+/source/apps/backend/protected/runtime
+/uploads
+.idea/

@@ -1,7 +1,7 @@
 <?php
 return array(
 	'db'=>array(
-		'connectionString' => 'mysql:host=localhost;dbname=longhien',
+		'connectionString' => 'mysql:host=localhost;dbname=wood',
 		'emulatePrepare' => true,
 		'username' => 'root',
 		'password' => 'root',
