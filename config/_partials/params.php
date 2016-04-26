@@ -38,7 +38,7 @@ return array(
 	),
 	'sections'=>array(
 		'home'=>1,
-		'sanpham'=>2,
+		'introduction'=>2,
 		'thuonghieu'=>3,
 		'dichvu'=>4,
 		'doitac'=>5,
