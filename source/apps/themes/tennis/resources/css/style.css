@@ -1193,16 +1193,10 @@ li.grid_1{
 	}
 }
 
-.products{
-
-}
-.products .item img{
-	max-width: 300px;
-	max-height: 200px;
-}
-.products .item{
-	min-height: 300px;
-}
+.products{}
+.products .item img{max-width: 300px;max-height: 200px;}
+.products .item{min-height: 300px;}
+.products .product-detail img{ max-width: 500px;max-height: 500px;}
 
 .paging1 { text-align:center; font-weight:bold; padding-top:20px; margin-bottom:20px; width: 100%; float: left }
 .paging1 a { float:left; display:block; width:17px; height:16px; border:1px solid #fff; outline:1px solid #d8d8d8; color:#464646; background-color:#fff;  margin-left:3px; margin-right:3px; padding-bottom:5px;       }
