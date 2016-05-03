@@ -4,15 +4,14 @@ $request = Yii::app()->request;
 $baseUrl = Yii::app()->urlManager->parseUrl($request);
 $sec = $request->getParam('sec');
 ?>
-<div class="header">
+<div class="header<?=($baseUrl!='site/index') ? '-about' : '';?>">
     <div class="header-top">
         <div class="wrap">
             <div class="top-nav">
                 <ul>
                     <li <?=($baseUrl=='site/index') ? 'class="active"' : '';?>><a href="/">Trang chủ</a></li>
+                    <li <?=($baseUrl=='products/index') ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('products/index', array())?>">Sản phẩm</a></li>
                     <li <?=($baseUrl=='content/introduction') ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('content/introduction', array())?>">Giới thiệu</a></li>
-                    <li <?=($baseUrl=='content/index' && (!empty($sec) && $sec==$sections->dichvu)) ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('content/index', array('sec'=>$sections->dichvu))?>">Dịch vụ</a></li>
-                    <li <?=($baseUrl=='content/index' && (!empty($sec) && $sec==$sections->doitac)) ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('content/index', array('sec'=>$sections->doitac))?>">Đối tác</a></li>
                     <li <?=($baseUrl=='site/contact') ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('site/contact', array())?>">Liên hệ</a></li>
                 </ul>
             </div>

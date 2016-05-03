@@ -40,7 +40,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fulltext'); ?>
-		<?php 
+		<?php
 		$this->widget('application.extensions.cleditor.ECLEditor', array(
 	        'model'=>$model,
 	        'attribute'=>'fulltext', //Model attribute name. Nome do atributo do modelo.

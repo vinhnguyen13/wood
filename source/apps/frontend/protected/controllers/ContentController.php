@@ -37,8 +37,27 @@ class ContentController extends Controller
 	
 	public function actionServices()
 	{
-		$content = Content::model()->findByAttributes(array('sectionid'=>$this->sections->services));
+		$content = new Content();
+		$criteria = new CDbCriteria();
+		$criteria->addCondition("sectionid=".$this->sections->services);
+		/** Pagination **/
+		$count = Content::model()->count($criteria);
+		$pages=new CPagination($count);
+		//Results per page
+		$pages->pageSize=10;
+		$pages->applyLimit($criteria);
+
+		$content = Content::model()->findAll($criteria);
 		$this->render('services', array(
+			'content'=>$content,
+			'pages' => $pages
+		));
+	}
+
+	public function actionPartners()
+	{
+		$content = Content::model()->findAllByAttributes(array('sectionid'=>$this->sections->partner));
+		$this->render('partners', array(
 			'content'=>$content
 		));
 	}

@@ -30,12 +30,10 @@
 		$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Danh Mục', 'url'=>array('/cms/categories/admin'), 'active'=> (Yii::app()->controller->id=='categories') ? true : false),
-				array('label'=>'Giới Thiệu', 'url'=>Yii::app()->createUrl('/cms/introduction/admin'), 'active'=> (Yii::app()->controller->id=='introduction') ? true : false),
+//				array('label'=>'Danh Mục', 'url'=>array('/cms/categories/admin'), 'active'=> (Yii::app()->controller->id=='categories') ? true : false),
+				array('label'=>'Nội Dung', 'url'=>Yii::app()->createUrl('/cms/content/admin'), 'active'=> (Yii::app()->controller->id=='introduction') ? true : false),
 				array('label'=>'Sản Phẩm', 'url'=>array('/cms/products/admin'), 'active'=> (Yii::app()->controller->id=='products') ? true : false),
-                array('label'=>'Hãng', 'url'=>Yii::app()->createUrl('/cms/manufactory/admin'), 'active'=> (Yii::app()->controller->id=='news') ? true : false),
-                array('label'=>'Xuất xứ', 'url'=>Yii::app()->createUrl('/cms/madeIn/admin'), 'active'=> (Yii::app()->controller->id=='news') ? true : false),
-                array('label'=>'Dịch vụ', 'url'=>Yii::app()->createUrl('/cms/services/admin'), 'active'=> (Yii::app()->controller->id=='services') ? true : false),
+//                array('label'=>'Dịch vụ', 'url'=>Yii::app()->createUrl('/cms/services/admin'), 'active'=> (Yii::app()->controller->id=='services') ? true : false),
 // 				array('label'=>'Đặt Hàng', 'url'=>Yii::app()->createUrl('/cms/payment/admin'), 'active'=> (Yii::app()->controller->id=='payment') ? true : false),
 				array('label'=>'Hình Ảnh - Quảng Cáo', 'url'=>array('/cms/advertising/admin'), 'active'=> (Yii::app()->controller->id=='advertising') ? true : false),
 // 				array('label'=>'Đơn Hàng', 'url'=>array('/cms/payDetail/admin'), 'active'=> (Yii::app()->controller->id=='payDetail') ? true : false),

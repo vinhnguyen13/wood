@@ -76,6 +76,8 @@ class ServicesController extends Controller
 				$_POST['Content'] = array_merge($_POST['Content'], $pFiles);
 			}
 			$model->attributes=$_POST['Content'];
+			if(is_array($model->params))
+				$model->params = json_encode($model->params);
 			if($model->save())
 				$this->redirect(array('admin'));
 		}
@@ -106,8 +108,12 @@ class ServicesController extends Controller
 				$_POST['Content'] = array_merge($_POST['Content'], $pFiles);
 			}
 			$model->attributes=$_POST['Content'];
-			if($model->save())
+			if(is_array($model->params))
+				$model->params = json_encode($model->params);
+			if($model->save()){
+
 				$this->redirect(array('admin'));
+			}
 		}
 
 		$this->render('update',array(

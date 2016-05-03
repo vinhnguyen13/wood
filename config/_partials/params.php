@@ -39,9 +39,9 @@ return array(
 	'sections'=>array(
 		'home'=>1,
 		'introduction'=>2,
-		'thuonghieu'=>3,
-		'dichvu'=>4,
-		'doitac'=>5,
+		'services'=>4,
+		'partner'=>5,
+		'products'=>3,
 		'giamgia_khuyenmai'=>6,
 		'contact'=>7,
 	)

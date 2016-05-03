@@ -16,9 +16,9 @@ class ExtLinkPager extends CLinkPager
 		if($this->prevPageLabel===null)
 			$this->prevPageLabel=Yii::t('yii','<img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingprev.png">');
 		if($this->firstPageLabel===null)
-//			$this->firstPageLabel=Yii::t('yii','<img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingprev.png"><img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingprev.png">');
+			$this->firstPageLabel=Yii::t('yii','<img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingprev.png"><img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingprev.png">');
 		if($this->lastPageLabel===null)
-//			$this->lastPageLabel=Yii::t('yii','<img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingnext.png"><img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingnext.png">');
+			$this->lastPageLabel=Yii::t('yii','<img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingnext.png"><img alt="Prev" src="'.Yii::app()->theme->baseUrl.'/resources/images/pagingnext.png">');
 		if($this->header===null)
 			$this->header=Yii::t('yii','Go to page: ');
 

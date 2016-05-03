@@ -7,7 +7,7 @@
             <h2>Giới thiệu</h2>
             <?php
             if(!empty($content)){
-                echo $content->fulltext;
+                echo nl2br($content->fulltext);
             }
             ?>
         </div>

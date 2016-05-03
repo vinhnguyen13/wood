@@ -15,9 +15,9 @@ $title = !empty($section) ? $section->title : '';
                             <img src="<?php echo $src;?>" alt=""><span> </span>
                         </a>
                         <div class="caption">
-                            <h4><a href="<?php echo Yii::app()->createUrl('content/view', array('id' => $item->id, 'slug' => $item->slug, 'type'=>'dich-vu')) ?>"><?php echo $item->title; ?></a></h4>
+                            <h4><a href="<?php echo Yii::app()->createUrl('content/view', array('id' => $item->id, 'slug' => $item->slug, 'type'=>'doi-tac')) ?>"><?php echo $item->title; ?></a></h4>
                             <p><?php echo strip_tags($item->introtext); ?></p>
-                            <a href="<?php echo Yii::app()->createUrl('content/view', array('id' => $item->id, 'slug' => $item->slug, 'type'=>'dich-vu')) ?>" class="btn">read more</a>
+                            <a href="<?php echo Yii::app()->createUrl('content/view', array('id' => $item->id, 'slug' => $item->slug, 'type'=>'doi-tac')) ?>" class="btn">read more</a>
                         </div>
                     </div>
                     <?php
