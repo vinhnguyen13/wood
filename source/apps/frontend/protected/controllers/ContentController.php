@@ -30,6 +30,10 @@ class ContentController extends Controller
 	public function actionIntroduction()
 	{
 		$content = Content::model()->findByAttributes(array('sectionid'=>$this->sections->introduction));
+		if(!empty($content)){
+			$this->metas['description'] = $content->introtext;
+			$this->metas['keywords'] = $content->title;
+		}
 		$this->render('introduction', array(
 			'content'=>$content
 		));

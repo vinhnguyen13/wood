@@ -2,7 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<meta name="Description" content="<?=!empty($this->metas['description']) ? CHtml::encode($this->metas['description']) : CHtml::encode($this->pageTitle);?>"/>
+	<meta name="Keywords" content="<?=!empty($this->metas['keywords']) ? CHtml::encode($this->metas['keywords']) : CHtml::encode($this->pageTitle);?>"/>
+	<meta name="robots" content="index, follow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="referrer" content="default"/>
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 	<link href="<?php echo Yii::app()->theme->baseUrl; ?>/resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

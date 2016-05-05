@@ -37,6 +37,10 @@ class ProductsController extends Controller
 		$product = new Products();
 		if(!empty($id)){
 			$product = Products::model()->findByPk($id);
+			if(!empty($product)){
+				$this->metas['description'] = $product->introtext;
+				$this->metas['keywords'] = $product->title;
+			}
 		}
 		/* form order */
 		$model = new OrderForm(); 
