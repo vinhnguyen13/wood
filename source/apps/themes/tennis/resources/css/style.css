@@ -1232,3 +1232,26 @@ li.grid_1{
 .paging1 a img { margin-top: 1px;   }
 .paging1 .out { display:block; width:17px; height:14px; padding-top:3px;     }
 .paging1 .current { display:block; width:17px; height:16px; color:#fff; background-color:#003e7b; padding-top:1px;     }
+.imgproduct {
+	float: left;
+	margin-right: 15px;
+}
+.product-content {
+	overflow: hidden;
+	font-size: 14px;
+}
+.product-content h1 {
+	font-size: 23px;
+	color: #A4DE54;
+	margin-bottom: 10px;
+}
+.product-content .price {
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.product-content .price span {
+	font-weight: 400;
+}
+.product-content .desc {
+	line-height: 20px;
+}
