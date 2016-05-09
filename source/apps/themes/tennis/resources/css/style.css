@@ -251,8 +251,16 @@ p.desc{
 	width: 100%;
 	padding:0;
 	overflow: hidden;
-	border-bottom: 1px solid #F0F0F0;
-	margin-bottom: 3px;
+	font-family: verdana, arial, helvetica, helve, sans-serif;
+	font-size: 0.8125em;
+	line-height: 1.6em;
+	display: block;
+	color: #707070;
+}
+.content-full h2 {
+	font-size: 1.5em;
+	color: #333;
+	text-transform: uppercase;
 }
 .middle-content {
 	width: 100%;
