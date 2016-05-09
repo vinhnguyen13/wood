@@ -33,7 +33,7 @@ if (empty($product->amount)) {
         <div class="content-full products">
             <h2>CHI TIẾT SẢN PHẨM</h2>
             <!--.product-detail -->
-            <div class="product-detail">
+            <div class="product-detail clearfix">
                 <div class="imgproduct"><a href="<?php echo $src; ?>" class="fancybox" rel='gal1' title="image"><img src="<?php echo $src; ?>" alt="image" class="imgpro"/></a></div>
                 <!--.product-content -->
                 <div class="product-content">
