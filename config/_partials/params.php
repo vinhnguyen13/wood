@@ -41,6 +41,7 @@ return array(
 		'introduction'=>2,
 		'thuonghieu'=>3,
 		'dichvu'=>4,
+		'services'=>4,
 		'doitac'=>5,
 		'giamgia_khuyenmai'=>6,
 		'contact'=>7,

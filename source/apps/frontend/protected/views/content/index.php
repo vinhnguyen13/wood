@@ -1,6 +1,14 @@
 <?php
 $title = !empty($section) ? $section->title : '';
 ?>
+<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/resources/js/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/resources/css/jquery.fancybox.css" media="screen" />
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+
+    });
+</script>
 <div class="content-top">
     <div class="wrap">
         <div class="content-full">

@@ -18,84 +18,56 @@ if (empty($product->amount)) {
     $clsAmount = ' out-of-stock';
 }
 ?>
+<div class="content-top products-detail">
+    <div class="wrap">
+        <div class="content-full">
+            <h2>CHI TIẾT: <?php echo $product->title; ?></h2>
+            <img src="<?php echo $src; ?>" width="800" alt="image" class="imgpro"/>
+            <?=$product->fulltext;?>
+        </div>
 
-<div class="block-content-large content-margin">
-    <h2>CHI TIẾT SẢN PHẨM</h2>
-    <!--.product-detail -->
-    <div class="product-detail">
-        <div class="imgproduct"><a href="<?php echo $src; ?>" class="jqzoom" rel='gal1' title="image"><img
-                    src="<?php echo $src; ?>" alt="image" class="imgpro"/></a></div>
-        <!--.product-content -->
-        <div class="product-content">
-            <h1><?php echo $product->title; ?></h1>
+        <div class="clear"></div>
+    </div>
+</div>
 
-            <div class="price">Giá: <span><?php echo $product->price; ?></span></div>
-            <?php if (!empty($product->category->title)) { ?>
-                <div class="price">Thuộc loại: <span><?php echo $product->category->title; ?></span></div>
-            <?php } ?>
-            <div class="price">Ngày đăng: <span><?= date('d-m-Y', $product->created); ?></span></div>
-            <div class="desc">
-                <?php echo $product->fulltext; ?>
-            </div>
-            <div class="clearb"><br/>
+<?php if (!empty($products)):?>
+    <?php
+    $title = !empty($section) ? $section->title : '';
+    ?>
+    <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/resources/js/jquery.fancybox.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/resources/css/jquery.fancybox.css" media="screen" />
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.fancybox').fancybox();
+
+        });
+    </script>
+    <div class="content-top products">
+        <div class="wrap">
+            <div class="content-full">
+                <h2>Sản phẩm khác</h2>
+                <?php
+                if (!empty($products)):
+                    foreach ($products as $item) {
+                        $src = $item->images;
+                        $url = Yii::app()->createUrl('products/view', array('id' => $item->id, 'slug' => $item->slug));
+                        ?>
+                        <div class="col_1_of_4 span_1_of_4 item">
+                            <a class="fancybox" href="<?php echo $src;?>" data-fancybox-group="gallery" title="<?=$item->title;?>">
+                                <img src="<?php echo $src;?>" alt=""><span style="clear: both"> </span>
+                            </a>
+                            <div class="caption">
+                                <h4><a href="<?=$url;?>"><?=Util::partString(strip_tags($item->title), 0, 15); ?></a></h4>
+                                <p><?=Util::partString(strip_tags($item->introtext), 0, 100); ?></p>
+                                <a href="<?=$url;?>" class="btn">read more</a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                endif;
+                ?>
+                <div class="clear"></div>
             </div>
         </div>
-        <!--End .product-content -->
     </div>
-    <!--End .product-detail -->
-    <div class="clearb"></div>
-    <div class="content-footer"></div>
-</div>
-<?php if (!empty($products)):?>
-<div class="block-content-large content-margin">
-    <h2 class="h2">SẢN PHẨM CÙNG LOẠI</h2>
-    <!--.items-content -->
-    <div class="items-content">
-        <?php
-            foreach ($products as $item) {
-                $src = Yii::app()->theme->baseUrl . '/resources/images/no_photo.jpg';
-                if (!empty($item->images) && is_file(Yii::getPathOfAlias('pathroot') . $item->images)) {
-                    $src = $item->images;
-                }
-                $price = 0;
-                if (!empty($item->price)) {
-                    $price = number_format($item->price);
-                }
-                $price_new = 0;
-                if (!empty($item->price_new)) {
-                    $price_new = number_format($item->price_new);
-                }
-                $url = Yii::app()->createUrl('products/view', array('id' => $item->id, 'slug' => $item->slug));
-                ?>
-                <div class="items">
-                    <?php if (!empty($item->promotions)): ?>
-                        <!-- 	    	<span class="khuyenmai"></span>  -->
-                    <?php endif; ?>
-                    <?php if (!empty($item->new)): ?>
-                        <!-- 	    	<span class="new-pro"></span>  -->
-                    <?php endif; ?>
-                    <a href="<?php echo $url; ?>" class="bgImg"><img src="<?php echo $src; ?>" alt="" width="153"
-                                                                     height="153"/></a><br/>
-                    <strong class="blue"><a href="<?php echo $url; ?>"><?php echo $item->title; ?></a></strong><br/>
-                    <br/>
-                    <strong>Giá:</strong> <strong class="red"><?php echo $price_new; ?> VNĐ</strong></div>
-            <?php
-            }
-            ?>
-            <div class="clearb"></div>
-
-            <!-- .paging1 -->
-            <?php if (!empty($pages) && $pages->getItemCount() > $pages->getPageSize()): ?>
-            <div class="paging1">
-                <?php $this->widget('backend.extensions.ExtLinkPager', array('pages' => $pages,)); ?>
-            </div>
-            <?php endif; ?>
-            <!-- End .paging1 -->
-
-    </div>
-    <!--ENd .items-content -->
-
-
-    <div class="content-footer"></div>
-</div>
 <?php endif; ?>

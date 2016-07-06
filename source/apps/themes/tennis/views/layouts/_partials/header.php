@@ -10,9 +10,9 @@ $sec = $request->getParam('sec');
             <div class="top-nav">
                 <ul>
                     <li <?=($baseUrl=='site/index') ? 'class="active"' : '';?>><a href="/">Trang chủ</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('products/index', array())?>" <?=($baseUrl=='products/index') ? 'class="current"' : '';?>>Sản phẩm</a>
                     <li <?=($baseUrl=='content/introduction') ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('content/introduction', array())?>">Giới thiệu</a></li>
                     <li <?=($baseUrl=='content/index' && (!empty($sec) && $sec==$sections->dichvu)) ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('content/index', array('sec'=>$sections->dichvu))?>">Dịch vụ</a></li>
-                    <li <?=($baseUrl=='content/index' && (!empty($sec) && $sec==$sections->doitac)) ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('content/index', array('sec'=>$sections->doitac))?>">Đối tác</a></li>
                     <li <?=($baseUrl=='site/contact') ? 'class="active"' : '';?>><a href="<?php echo Yii::app()->createUrl('site/contact', array())?>">Liên hệ</a></li>
                 </ul>
             </div>
@@ -22,7 +22,7 @@ $sec = $request->getParam('sec');
     <div class="header-bottom">
         <div class="wrap">
             <div class="logo">
-                <a href="index.html"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resources/images/logo.png" alt=""></a>
+                <a href="/"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/resources/images/logo.png" alt=""></a>
             </div>
             <div class="header-right">
                 <ul class="follow_icon">
